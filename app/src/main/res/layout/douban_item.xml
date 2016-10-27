@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    >
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/item_image"
+        android:scaleType="centerCrop"
+        tools:src="@mipmap/ic_launcher"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            tools:text="电影标题"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:maxLines="1"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+            <TextView
+                style="@style/ItemText"
+                android:text="导演:"
+                android:id="@+id/item_director"
+                android:gravity="center"
+                />
+            <TextView
+                style="@style/ItemText"
+                android:gravity="center"
+                tools:text="导演名字"
+                android:layout_toRightOf="@id/item_director"
+                android:id="@+id/item_director_name"
+                />
+            <TextView
+                style="@style/ItemText"
+                tools:text="演员名字"
+                android:layout_alignParentRight="true"
+                android:id="@+id/item_actor"
+                />
+            <TextView
+                style="@style/ItemText"
+                android:text="演员:"
+                android:layout_toLeftOf="@id/item_actor"
+                android:id="@+id/item_actor_name"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
